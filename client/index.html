@@ -1,0 +1,35 @@
+<html>
+
+<head>
+   <base href="/">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+</head>
+
+<body class="container">
+  <h1>Freecode-camp File Metadata Project</h1>
+
+  <div ng-app="app">
+    <div ng-controller="MainCtroller">
+      <input type="file" nv-file-select uploader="uploader"/><br/>
+      <ul>
+        <li ng-repeat="item in uploader.queue">
+          <div class="col-xs-12" ng-if="!item.uploaded">
+            Name: <span ng-bind="item.file.name"></span><br/>
+            <button class="btn btn-primary" ng-if="!item.uploaded" ng-click="autoUpload(item)"> upload </button>
+          </div>
+           <div class="col-xs-12" ng-if="item.uploaded">
+            <h2>file info</h2>
+              <div>{{item.file}}</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-file-upload/2.4.1/angular-file-upload.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+
+</html>
