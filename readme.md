@@ -1,14 +1,9 @@
-# Image Search Abstract Layer Project
+# Freecode-camp File Metadata Microservice
 
+Here are the specific user stories you should implement for this project:
 
-### Objective: Build an API that allows you to search for images like 
-this: https://cryptic-ridge-9197.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10 and browse recent 
-search queries like this: https://cryptic-ridge-9197.herokuapp.com/api/latest/imagesearch/. Then deploy it to Heroku.
+1. User Story: I can submit a FormData object that includes a file upload.
 
-### Specific user stories you should implement for this project:
+2. User Story: When I submit something, I will receive the file size in bytes within the JSON response
 
-1. User Story: I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
-
-2. User Story: I can paginate through the responses by adding a ?offset=2 parameter to the URL.
-
-3. User Story: I can get a list of the most recently submitted search strings.
+Hint: You may want to use this package: https://www.npmjs.com/package/multer
